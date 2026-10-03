@@ -33,6 +33,8 @@ const asset = (path) => `${base}${path}`.replace(/\/{2,}/g, '/')
         var saved = localStorage.getItem('rg-theme')
         if (saved) document.documentElement.dataset.theme = saved
       } catch (e) {}
+      // A partir daqui o CSS pode esconder o que vai ser animado.
+      document.documentElement.classList.add('js-motion')
     </script>
 
     <script type="application/ld+json" set:html={JSON.stringify({

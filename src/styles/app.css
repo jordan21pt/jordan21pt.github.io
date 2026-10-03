@@ -691,7 +691,9 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* ---- Motion ---------------------------------------------------------- */
-[data-reveal] { opacity: 0; transform: translateY(24px); }
+/* So esconde quando o JS confirma que vai animar (classe posta no <head>).
+   Sem JS, com JS partido ou com erro, o conteudo fica visivel. */
+.js-motion [data-reveal] { opacity: 0; transform: translateY(24px); }
 .word { display: inline-block; }
 
 @media (prefers-reduced-motion: reduce) {
@@ -701,6 +703,6 @@ img { max-width: 100%; height: auto; display: block; }
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  [data-reveal] { opacity: 1; transform: none; }
+  .js-motion [data-reveal] { opacity: 1; transform: none; }
   .marquee__track { animation: none; }
 }

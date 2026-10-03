@@ -51,9 +51,9 @@ function setupSmoothScroll() {
 }
 
 if (!reduced) {
-  setupReveals()
-  setupSmoothScroll()
-  setupTimeline()
+  correr('reveals', setupReveals)
+  correr('smooth scroll', setupSmoothScroll)
+  correr('timeline', setupTimeline)
 }
 
 function setupTimeline() {
@@ -160,4 +160,18 @@ function setupWheelTakeover(scroller) {
   }, { passive: false })
 }
 
-setupHorizontalTimeline()
+function revelarTudo(etapa, erro) {
+  document.documentElement.classList.remove('js-motion')
+  console.error(`[motion] "${etapa}" falhou; conteudo revelado sem animacao.`, erro)
+}
+
+// Isolados: um erro numa seccao nao leva as outras atras nem apaga a pagina.
+function correr(etapa, fn) {
+  try {
+    fn()
+  } catch (erro) {
+    revelarTudo(etapa, erro)
+  }
+}
+
+correr('timeline horizontal', setupHorizontalTimeline)
