@@ -1,0 +1,23 @@
+---
+const { block } = Astro.props
+---
+<section id={block.id} class="section" data-reveal-group>
+  <div class="wrap">
+    <h2 data-split>{block.title}</h2>
+    <div class="project-grid">
+      {block.items.map((item) => (
+        <article class="project-card" data-reveal>
+          <h3>
+            {item.href
+              ? <a href={item.href} target="_blank" rel="noopener">{item.name}</a>
+              : item.name}
+          </h3>
+          <p>{item.body}</p>
+          <ul class="chips">
+            {item.stack.map((tech) => <li class="chip">{tech}</li>)}
+          </ul>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

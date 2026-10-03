@@ -1,0 +1,26 @@
+---
+// Aceita [texto](url) no meio da frase. Sem dependencias e sem HTML cru:
+// cada pedaco sai como no de Astro, logo o escape e o normal.
+const { text } = Astro.props
+
+const parts = []
+const pattern = /\[([^\]]+)\]\(([^)\s]+)\)/g
+let cursor = 0
+let match
+
+while ((match = pattern.exec(text)) !== null) {
+  if (match.index > cursor) parts.push({ type: 'text', value: text.slice(cursor, match.index) })
+  parts.push({ type: 'link', value: match[1], href: match[2] })
+  cursor = match.index + match[0].length
+}
+if (cursor < text.length) parts.push({ type: 'text', value: text.slice(cursor) })
+
+const external = (href) => href.startsWith('http')
+---
+{parts.map((part) => part.type === 'link'
+  ? <a
+      href={part.href}
+      target={external(part.href) ? '_blank' : undefined}
+      rel={external(part.href) ? 'noopener' : undefined}
+    >{part.value}</a>
+  : part.value)}

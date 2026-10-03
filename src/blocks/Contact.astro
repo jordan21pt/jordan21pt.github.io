@@ -1,0 +1,19 @@
+---
+const { block, site } = Astro.props
+const { meta } = site
+---
+<section id={block.id} class="section contact" data-reveal-group>
+  <div class="wrap">
+    <h2 data-split>{block.title}</h2>
+    <p class="muted" data-reveal>{block.body}</p>
+    <p class="contact__email" data-reveal>
+      <a class="mail" href={`mailto:${meta.email}`}>{meta.email}</a>
+      {block.emailNote && <small class="contact__note">({block.emailNote})</small>}
+    </p>
+    <div class="socials" data-reveal>
+      {meta.social.filter((s) => s.href).map((s) => (
+        <a href={s.href} target="_blank" rel="noopener">{s.label}</a>
+      ))}
+    </div>
+  </div>
+</section>

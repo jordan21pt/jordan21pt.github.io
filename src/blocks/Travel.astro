@@ -1,0 +1,57 @@
+---
+import { Image } from 'astro:assets'
+
+const { block } = Astro.props
+
+// Mesmo padrao do percurso: o glob carrega a pasta e o campo `photo`
+// do JSON e so o nome do ficheiro.
+const imagens = import.meta.glob('../assets/travel/*.{jpg,jpeg,png,webp,avif}', { eager: true })
+const acharFoto = (nome) => (nome ? imagens[`../assets/travel/${nome}`]?.default : undefined)
+const paises = new Set(block.stops.map((s) => s.country))
+---
+<section id={block.id} class="section" data-reveal-group>
+  <div class="wrap">
+    <h2 data-split>{block.title}</h2>
+    {block.body && <p class="muted" data-reveal>{block.body}</p>}
+
+    <p class="travel__stats" data-reveal>
+      <span><strong>{paises.size}</strong> {paises.size === 1 ? 'país' : 'países'}</span>
+      <span><strong>{block.stops.length}</strong> {block.stops.length === 1 ? 'paragem' : 'paragens'}</span>
+    </p>
+  </div>
+
+  {/* Fora do .wrap: a faixa sangra ate a margem para se perceber que continua. */}
+  <div class="htl" data-htl tabindex="0" role="group" aria-label={block.title}>
+    <div class="htl__track">
+      <div class="htl__rail" aria-hidden="true">
+        <span class="htl__progress" data-htl-progress></span>
+      </div>
+
+      <ol class="htl__stops">
+        {block.stops.map((stop) => {
+          const foto = acharFoto(stop.photo)
+          return (
+          <li class="htl__stop">
+            <div class="htl__card">
+              <p class="htl__year">{stop.year}</p>
+              <h3>{stop.place}</h3>
+              <p class="htl__country">{stop.country}</p>
+              {stop.note && <p class="muted htl__note">{stop.note}</p>}
+            </div>
+
+            <figure class="htl__photo">
+              {foto
+                ? <Image src={foto} alt={stop.photoAlt ?? ''} widths={[260, 520]} sizes="250px" format="webp" quality={76} loading="lazy" />
+                : <span class="htl__photo-empty" aria-hidden="true">{stop.place}</span>}
+            </figure>
+          </li>
+          )
+        })}
+      </ol>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <p class="htl__hint muted" data-reveal>Scroll ou arrasta para ver o resto</p>
+  </div>
+</section>

@@ -1,0 +1,9 @@
+---
+const { block } = Astro.props
+---
+<section id={block.id} class="section" data-reveal-group>
+  <div class="wrap">
+    <h2 data-split>{block.title}</h2>
+    {block.paragraphs.map((p) => <p class="muted" data-reveal>{p}</p>)}
+  </div>
+</section>

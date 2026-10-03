@@ -1,0 +1,26 @@
+---
+const { block } = Astro.props
+const all = block.groups.flatMap((g) => g.items)
+---
+<section id={block.id} class="section" data-reveal-group>
+  <div class="wrap">
+    <h2 data-split>{block.title}</h2>
+    <div class="skill-groups">
+      {block.groups.map((group) => (
+        <div data-reveal>
+          <h3>{group.label}</h3>
+          <ul class="chips">
+            {group.items.map((item) => <li class="chip">{item}</li>)}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="marquee" aria-hidden="true">
+      {/* A lista vai duplicada: e o que faz o loop nao dar salto. */}
+      <div class="marquee__track">
+        {[...all, ...all].map((item) => <span>{item}</span>)}
+      </div>
+    </div>
+  </div>
+</section>

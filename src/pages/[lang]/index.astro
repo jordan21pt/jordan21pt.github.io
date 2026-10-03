@@ -1,0 +1,19 @@
+---
+import Base from '../../layouts/Base.astro'
+import BlockRenderer from '../../components/BlockRenderer.astro'
+import { codigos, getSite, LINGUA_OMISSAO } from '../../content/langs.js'
+
+// Gera uma rota por cada JSON que nao seja o da lingua por omissao,
+// que ja vive na raiz. Sem outros ficheiros, nao gera nada.
+export function getStaticPaths() {
+  return codigos
+    .filter((codigo) => codigo !== LINGUA_OMISSAO)
+    .map((codigo) => ({ params: { lang: codigo } }))
+}
+
+const { lang } = Astro.params
+const site = getSite(lang)
+---
+<Base site={site} lang={lang}>
+  <BlockRenderer blocks={site.blocks} site={site} />
+</Base>

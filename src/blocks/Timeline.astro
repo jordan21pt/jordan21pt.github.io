@@ -1,0 +1,65 @@
+---
+import { Image } from 'astro:assets'
+import RichText from '../components/RichText.astro'
+
+const { block } = Astro.props
+
+// O Astro precisa de conhecer as imagens em build, por isso nao da para
+// importar por caminho vindo do JSON. O glob carrega a pasta toda e o
+// campo `photo` passa a ser so o nome do ficheiro.
+const images = import.meta.glob('../assets/timeline/*.{jpg,jpeg,png,webp,avif}', { eager: true })
+const findPhoto = (name) => (name ? images[`../assets/timeline/${name}`]?.default : undefined)
+---
+<section id={block.id} class="section" data-reveal-group>
+  <div class="wrap">
+    <h2 data-split>{block.title}</h2>
+
+    <ol class="timeline" data-timeline>
+      <div class="timeline__rail" aria-hidden="true">
+        <span class="timeline__progress" data-timeline-progress></span>
+      </div>
+
+      {block.items.map((item) => {
+        const photo = findPhoto(item.photo)
+        return (
+          <li class="timeline__item" data-reveal>
+            <div class="timeline__content">
+              <p class="timeline__year">{item.year}</p>
+              <h3>{item.title}</h3>
+
+              {item.place && (
+                <p class="timeline__place">
+                  {item.placeHref
+                    ? <a href={item.placeHref} target="_blank" rel="noopener">{item.place}</a>
+                    : item.place}
+                </p>
+              )}
+
+              <p class="muted"><RichText text={item.body} /></p>
+
+              {item.links && (
+                <ul class="timeline__links">
+                  {item.links.map((link) => (
+                    <li><a href={link.href} target="_blank" rel="noopener">{link.label}</a></li>
+                  ))}
+                </ul>
+              )}
+
+              {item.tags && (
+                <ul class="chips">
+                  {item.tags.map((tag) => <li class="chip">{tag}</li>)}
+                </ul>
+              )}
+            </div>
+
+            <figure class="timeline__photo">
+              {photo
+                ? <Image src={photo} alt={item.photoAlt ?? ''} widths={[420, 780]} sizes="(min-width: 820px) 42vw, 100vw" format="webp" quality={76} loading="lazy" />
+                : <span class="timeline__photo-empty" aria-hidden="true">{item.year}</span>}
+            </figure>
+          </li>
+        )
+      })}
+    </ol>
+  </div>
+</section>

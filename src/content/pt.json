@@ -1,0 +1,277 @@
+{
+  "meta": {
+    "name": "Rui Gonçalves",
+    "role": "Software Engineer",
+    "email": "rui_21_99@hotmail.com",
+    "description": "Portefólio de Rui Gonçalves, software engineer com foco em backend e cloud.",
+    "cv": "ruiGoncalves.pdf",
+    "available": true,
+    "availableLabel": "Disponível para novos projetos",
+    "social": [
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/ruisgoncalves/"
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/jordan21pt"
+      }
+    ]
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "eyebrow": "Software Engineer",
+      "headline": "Rui Gonçalves",
+      "body": "Trabalho entre backend, cloud e interfaces modernas para transformar ideias em software escalável, rápido e memorável.",
+      "photo": "rui.jpg"
+    },
+    {
+      "type": "text",
+      "id": "sobre",
+      "title": "Sobre mim",
+      "paragraphs": [
+        "Licenciado em Ciências da Computação pela Universidade do Minho, com experiência na modernização de um sistema POS legacy de C e SQLite para C++, Qt/QML e MongoDB.",
+        "Atualmente frequento o mestrado em Engenharia Informática no IPCA, com foco em arquiteturas backend, cloud e sistemas distribuídos."
+      ]
+    },
+    {
+      "type": "skills",
+      "id": "competencias",
+      "title": "Competências",
+      "groups": [
+        {
+          "label": "Linguagens",
+          "items": [
+            "C++",
+            "TypeScript",
+            "JavaScript",
+            "C",
+            "SQL"
+          ]
+        },
+        {
+          "label": "Backend & Dados",
+          "items": [
+            "Node.js",
+            "MongoDB",
+            "MySQL",
+            "SQLite",
+            "REST"
+          ]
+        },
+        {
+          "label": "Interfaces",
+          "items": [
+            "Qt/QML",
+            "HTML",
+            "CSS",
+            "Astro"
+          ]
+        },
+        {
+          "label": "Infraestrutura",
+          "items": [
+            "Docker",
+            "Kubernetes",
+            "Git",
+            "Linux"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "timeline",
+      "id": "percurso",
+      "title": "Percurso",
+      "_nota": "DATAS POR CONFIRMAR - sao inferidas, nao verificadas. Corrigir antes de publicar.",
+      "items": [
+        {
+          "year": "2019 — 2024",
+          "title": "Licenciatura em Ciências da Computação",
+          "place": "Universidade do Minho",
+          "body": "Bases de algoritmia, estruturas de dados, sistemas operativos e engenharia de software.",
+          "tags": [
+            "C",
+            "Algoritmia",
+            "Sistemas"
+          ],
+          "placeHref": "https://www.uminho.pt",
+          "photo": "uminho.jpg",
+          "photoAlt": "Campus da Universidade do Minho"
+        },
+        {
+          "year": "2023",
+          "title": "Software Engineer",
+          "place": "SDI Lab",
+          "body": "Entrada numa equipa de produto a trabalhar sobre um sistema POS em produção, escrito em C com SQLite.",
+          "tags": [
+            "C",
+            "SQLite"
+          ],
+          "photo": "primeiro-emprego.jpg",
+          "photoAlt": "Secretária de trabalho"
+        },
+        {
+          "year": "2024",
+          "title": "Modernização do POS",
+          "place": "SDI Lab",
+          "body": "Migração progressiva do sistema legacy para C++, Qt/QML e MongoDB. Reestruturei componentes críticos e reduzi o custo de manutenção sem parar a evolução do produto.",
+          "tags": [
+            "C++",
+            "Qt/QML",
+            "MongoDB"
+          ],
+          "links": [
+            {
+              "label": "Repositório",
+              "href": "https://github.com/jordan21pt"
+            }
+          ],
+          "photo": "pos.jpg",
+          "photoAlt": "Interface do sistema POS"
+        },
+        {
+          "year": "2025 — presente",
+          "title": "Mestrado em Engenharia Informática",
+          "place": "IPCA",
+          "body": "Foco em arquiteturas backend, cloud e sistemas distribuídos, a par do trabalho em produto. Ver também os [projetos](#projetos) que saíram daqui.",
+          "tags": [
+            "Cloud",
+            "Sistemas distribuídos"
+          ],
+          "placeHref": "https://ipca.pt",
+          "photo": "ipca.jpg",
+          "photoAlt": "Campus do IPCA"
+        }
+      ],
+      "_fotos": "Poe os ficheiros em src/assets/timeline/ e usa so o nome em `photo`. Sem ficheiro, aparece o ano em marca de agua."
+    },
+    {
+      "type": "projects",
+      "id": "projetos",
+      "title": "Projetos",
+      "items": [
+        {
+          "name": "POS Next",
+          "body": "Migração progressiva de um sistema legacy para arquitetura modular com melhores práticas de engenharia.",
+          "stack": [
+            "C++",
+            "Qt/QML",
+            "MongoDB"
+          ],
+          "href": ""
+        },
+        {
+          "name": "Cloud Playground",
+          "body": "Ambiente de deploy containerizado para testar serviços Node.js, monitorização e escalabilidade.",
+          "stack": [
+            "Node.js",
+            "Docker",
+            "Kubernetes"
+          ],
+          "href": ""
+        },
+        {
+          "name": "API Hub",
+          "body": "API backend em TypeScript para agregação de dados com foco em performance e observabilidade.",
+          "stack": [
+            "TypeScript",
+            "MySQL",
+            "REST"
+          ],
+          "href": ""
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "faq",
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "q": "Que tipo de trabalho procuras?",
+          "a": "Engenharia de software em equipas de produto, sobretudo backend, cloud e sistemas distribuídos."
+        },
+        {
+          "q": "Trabalhas remotamente?",
+          "a": "Sim, remoto ou híbrido a partir do norte de Portugal."
+        },
+        {
+          "q": "Com que stack trabalhas?",
+          "a": "C++ e Qt/QML no desktop, Node.js e TypeScript no servidor, MongoDB e MySQL em dados, Docker e Kubernetes em infraestrutura."
+        },
+        {
+          "q": "Estás disponível já?",
+          "a": "Estou a frequentar o mestrado, por isso avalio disponibilidade caso a caso. Escreve-me e falamos."
+        }
+      ]
+    },
+    {
+      "type": "travel",
+      "id": "viagens",
+      "title": "Por onde andei",
+      "_nota": "DADOS DE EXEMPLO - paragens e anos inventados, so para veres o layout. Substitui pelos teus.",
+      "body": "As paragens que fui fazendo, por ordem.",
+      "stops": [
+        {
+          "year": "2018",
+          "place": "Braga",
+          "country": "Portugal",
+          "note": "Onde tudo começou.",
+          "photo": "braga.jpg",
+          "photoAlt": "Braga, Portugal"
+        },
+        {
+          "year": "2019",
+          "place": "Porto",
+          "country": "Portugal",
+          "photo": "porto.jpg",
+          "photoAlt": "Porto, Portugal"
+        },
+        {
+          "year": "2021",
+          "place": "Lisboa",
+          "country": "Portugal",
+          "photo": "lisboa.jpg",
+          "photoAlt": "Lisboa, Portugal"
+        },
+        {
+          "year": "2022",
+          "place": "Madrid",
+          "country": "Espanha",
+          "photo": "madrid.jpg",
+          "photoAlt": "Madrid, Espanha"
+        },
+        {
+          "year": "2023",
+          "place": "Barcelona",
+          "country": "Espanha",
+          "photo": "barcelona.jpg",
+          "photoAlt": "Barcelona, Espanha"
+        },
+        {
+          "year": "2024",
+          "place": "Paris",
+          "country": "França",
+          "photo": "paris.jpg",
+          "photoAlt": "Paris, França"
+        },
+        {
+          "year": "2025",
+          "place": "Roma",
+          "country": "Itália",
+          "photo": "roma.jpg",
+          "photoAlt": "Roma, Itália"
+        }
+      ]
+    },
+    {
+      "type": "contact",
+      "id": "contacto",
+      "title": "Vamos falar",
+      "body": "Disponível para oportunidades em engenharia de software e equipas de produto.",
+      "emailNote": "sim, eu continuo a usar um email hotmail"
+    }
+  ]
+}

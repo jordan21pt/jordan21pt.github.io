@@ -1,0 +1,10 @@
+---
+import Base from '../layouts/Base.astro'
+import BlockRenderer from '../components/BlockRenderer.astro'
+import { getSite, LINGUA_OMISSAO } from '../content/langs.js'
+
+const site = getSite(LINGUA_OMISSAO)
+---
+<Base site={site} lang={LINGUA_OMISSAO}>
+  <BlockRenderer blocks={site.blocks} site={site} />
+</Base>

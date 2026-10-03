@@ -1,0 +1,20 @@
+---
+import Hero from '../blocks/Hero.astro'
+import Text from '../blocks/Text.astro'
+import Skills from '../blocks/Skills.astro'
+import Timeline from '../blocks/Timeline.astro'
+import Projects from '../blocks/Projects.astro'
+import Faq from '../blocks/Faq.astro'
+import Travel from '../blocks/Travel.astro'
+import Contact from '../blocks/Contact.astro'
+
+// A pagina nao conhece as seccoes: a ordem vem do JSON da lingua activa.
+const registry = { hero: Hero, text: Text, skills: Skills, timeline: Timeline, projects: Projects, faq: Faq, travel: Travel, contact: Contact }
+
+const { blocks, site } = Astro.props
+---
+{blocks.map((block) => {
+  const Component = registry[block.type]
+  if (!Component) return null
+  return <Component block={block} site={site} />
+})}
