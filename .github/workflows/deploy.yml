@@ -20,6 +20,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: withastro/action@v3
+        with:
+          # O runner traz Node 20 por omissao; o Astro 7 exige >=22.12.
+          node-version: 22
 
   deploy:
     needs: build
