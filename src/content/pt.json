@@ -4,7 +4,7 @@
     "name": "Rui Gonçalves",
     "role": "Software Engineer",
     "email": "rui_21_99@hotmail.com",
-    "description": "Portefólio de Rui Gonçalves, software engineer com foco em backend e cloud.",
+    "description": "Portefólio de Rui Gonçalves, software engineer com foco em backend, AI e cloud.",
     "cv": "ruiGoncalves.pdf",
     "available": true,
     "availableLabel": "Disponível para novos projetos",
@@ -24,7 +24,7 @@
       "type": "hero",
       "eyebrow": "Software Engineer",
       "headline": "Rui Gonçalves",
-      "body": "Trabalho entre backend, cloud e interfaces modernas para transformar ideias em software escalável, rápido e memorável.",
+      "body": "Trabalho em backend e sistemas que têm de aguentar o dia a dia — de um POS em produção a algoritmos de deteção de caras em vídeo.",
       "photo": "rui.jpg"
     },
     {
@@ -32,8 +32,8 @@
       "id": "sobre",
       "title": "Sobre mim",
       "paragraphs": [
-        "Licenciado em Ciências da Computação pela Universidade do Minho, com experiência na modernização de um sistema POS legacy de C e SQLite para C++, Qt/QML e MongoDB.",
-        "Atualmente frequento o mestrado em Engenharia Informática no IPCA, com foco em arquiteturas backend, cloud e sistemas distribuídos."
+        "Licenciado em Ciências da Computação pela Universidade do Minho. No dia a dia trabalho com C++, Qt/QML e MongoDB, na modernização de um sistema POS legacy escrito em C e SQLite.",
+        "Em paralelo, faço o mestrado em Engenharia Informática no IPCA. A dissertação é sobre deteção de caras em vídeo, com prioridade ao recall: reduzir os falsos negativos quando a pessoa se vira ou as cores da imagem mudam."
       ]
     },
     {
@@ -57,6 +57,8 @@
             "Node.js",
             "MongoDB",
             "MySQL",
+            "PostgreSQL",
+            "Neo4j",
             "SQLite",
             "REST"
           ]
@@ -85,8 +87,19 @@
       "type": "timeline",
       "id": "percurso",
       "title": "Percurso",
-      "_nota": "DATAS POR CONFIRMAR - sao inferidas, nao verificadas. Corrigir antes de publicar.",
       "items": [
+        {
+          "year": "2018",
+          "title": "Repositor de supermercado",
+          "place": "SUPERCOR - Braga",
+          "body": "Todos começamos por algum lado. Eu comecei a repor coca-colas e a fazer entregas ao domicilio enquanto estudava para o exame nacional de matemática.",
+          "tags": [
+            "Atendimento ao cliente"
+          ],
+          "placeHref": "https://www.uminho.pt",
+          "photo": "uminho.jpg",
+          "photoAlt": "Campus da Universidade do Minho"
+        },
         {
           "year": "2019 — 2024",
           "title": "Licenciatura em Ciências da Computação",
@@ -102,13 +115,12 @@
           "photoAlt": "Campus da Universidade do Minho"
         },
         {
-          "year": "2023",
-          "title": "Software Engineer",
-          "place": "SDI Lab",
-          "body": "Entrada numa equipa de produto a trabalhar sobre um sistema POS em produção, escrito em C com SQLite.",
+          "year": "2021 - 2023",
+          "title": "Operador de loja",
+          "place": "FNAC - Braga",
+          "body": "Fazia um pouco de tudo, reposiçaõ de produtos, aconselhamento de serviços e produtos, vendas.",
           "tags": [
-            "C",
-            "SQLite"
+            "Atendimento ao cliente"
           ],
           "photo": "primeiro-emprego.jpg",
           "photoAlt": "Secretária de trabalho"
@@ -216,10 +228,10 @@
       "body": "As paragens que fui fazendo, por ordem.",
       "stops": [
         {
-          "year": "2018",
+          "year": "1999",
           "place": "Braga",
           "country": "Portugal",
-          "note": "Onde tudo começou.",
+          "note": "Onde tudo começou. A minha casa.",
           "photo": "braga.jpg",
           "photoAlt": "Braga, Portugal"
         },
@@ -227,13 +239,14 @@
           "year": "2019",
           "place": "Porto",
           "country": "Portugal",
+          "note": "Been here multiple times, great city.",
           "photo": "porto.jpg",
           "photoAlt": "Porto, Portugal"
         },
         {
-          "year": "2021",
-          "place": "Lisboa",
-          "country": "Portugal",
+          "year": "2020",
+          "place": "London",
+          "country": "UK",
           "photo": "lisboa.jpg",
           "photoAlt": "Lisboa, Portugal"
         },
