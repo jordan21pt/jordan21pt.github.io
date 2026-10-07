@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Conteúdo do site pessoal",
+  "description": "Cada ficheiro de língua (pt.json, en.json…) segue esta forma. O editor usa isto para autocompletar e avisar de erros antes do commit.",
+  "type": "object",
+  "required": ["meta", "blocks"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "meta": {
+      "type": "object",
+      "description": "Dados que aparecem em vários sítios: título da página, JSON-LD, contacto.",
+      "required": ["name", "role", "email", "description", "cv"],
+      "properties": {
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "description": { "type": "string", "description": "Meta description e OG. Uma frase." },
+        "cv": { "type": "string", "description": "Nome do PDF em public/." },
+        "available": { "type": "boolean", "description": "Mostra o badge no hero." },
+        "availableLabel": { "type": "string" },
+        "social": {
+          "type": "array",
+          "description": "Links vazios são ignorados — não aparecem no site nem no JSON-LD.",
+          "items": {
+            "type": "object",
+            "required": ["label", "href"],
+            "properties": {
+              "label": { "type": "string" },
+              "href": { "type": "string" }
+            },
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    "blocks": {
+      "type": "array",
+      "description": "A ordem aqui é a ordem das secções na página.",
+      "items": {
+        "type": "object",
+        "required": ["type"],
+        "properties": {
+          "type": {
+            "enum": ["hero", "text", "skills", "timeline", "projects", "faq", "travel", "contact"],
+            "description": "Tem de existir em components/BlockRenderer.astro, senão o bloco é ignorado."
+          },
+          "id": { "type": "string", "description": "Âncora da secção (#id)." },
+          "title": { "type": "string" },
+          "_nota": { "type": "string", "description": "Nota para ti; não é renderizada." },
+          "_fotos": { "type": "string" },
+
+          "eyebrow": { "type": "string" },
+          "headline": { "type": "string" },
+          "body": { "type": "string" },
+          "photo": { "type": "string", "description": "Nome do ficheiro na pasta de assets do bloco." },
+          "paragraphs": { "type": "array", "items": { "type": "string" } },
+
+          "groups": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["label", "items"],
+              "properties": {
+                "label": { "type": "string" },
+                "items": { "type": "array", "items": { "type": "string" } }
+              },
+              "additionalProperties": false
+            }
+          },
+
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "year": { "type": "string" },
+                "title": { "type": "string" },
+                "place": { "type": "string" },
+                "placeHref": { "type": "string" },
+                "body": { "type": "string", "description": "Aceita [texto](url) no meio da frase." },
+                "tags": { "type": "array", "items": { "type": "string" } },
+                "photo": { "type": "string" },
+                "photoAlt": { "type": "string" },
+                "links": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["label", "href"],
+                    "properties": {
+                      "label": { "type": "string" },
+                      "href": { "type": "string" }
+                    },
+                    "additionalProperties": false
+                  }
+                },
+                "name": { "type": "string" },
+                "stack": { "type": "array", "items": { "type": "string" } },
+                "href": { "type": "string" },
+                "q": { "type": "string" },
+                "a": { "type": "string" }
+              }
+            }
+          },
+
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["year", "place", "country"],
+              "properties": {
+                "year": { "type": "string" },
+                "place": { "type": "string" },
+                "country": { "type": "string" },
+                "note": { "type": "string" },
+                "photo": { "type": "string" },
+                "photoAlt": { "type": "string" }
+              },
+              "additionalProperties": false
+            }
+          },
+
+          "emailNote": { "type": "string" }
+        }
+      }
+    }
+  }
+}

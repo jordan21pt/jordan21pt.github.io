@@ -1,4 +1,5 @@
 {
+  "$schema": "./site.schema.json",
   "meta": {
     "name": "Rui Gonçalves",
     "role": "Software Engineer",
