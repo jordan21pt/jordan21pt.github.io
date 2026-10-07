@@ -400,14 +400,18 @@ img { max-width: 100%; height: auto; display: block; }
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: clamp(2.5rem, 7vw, 5.5rem);
-    align-items: center;
+    /* Alinhados pelo topo, nao pelo centro: com textos de comprimentos
+       diferentes, centrar fazia a foto flutuar a meio do bloco de texto
+       e desalinhar de maneira diferente em cada marco. */
+    align-items: start;
   }
 
+  /* O ponto fica a altura da linha do ano, como na versao empilhada. */
   .timeline__item::before {
     left: 50%;
     translate: -50% 0;
-    top: 50%;
-    margin-top: -5px;
+    top: 0.45rem;
+    margin-top: 0;
   }
 
   /* Impares: texto a esquerda, foto a direita. */
