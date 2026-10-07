@@ -414,19 +414,23 @@ img { max-width: 100%; height: auto; display: block; }
     margin-top: 0;
   }
 
-  /* Impares: texto a esquerda, foto a direita. */
-  .timeline__content { grid-column: 1; text-align: right; }
-  .timeline__photo { grid-column: 2; margin: 0; }
+  /* `grid-row: 1` nos dois e obrigatorio. Sem ele, nas linhas invertidas
+     a foto pede a coluna 1 depois de o texto ja ter ocupado a coluna 2:
+     o cursor da grelha ja passou, e a colocacao automatica atira a foto
+     para uma linha nova, por baixo do texto. */
+  .timeline__content { grid-column: 1; grid-row: 1; text-align: right; }
+  .timeline__photo { grid-column: 2; grid-row: 1; margin: 0; }
 
-  /* Pares: troca. */
-  .timeline__item:nth-child(even) .timeline__content { grid-column: 2; text-align: left; }
-  .timeline__item:nth-child(even) .timeline__photo { grid-column: 1; }
+  /* nth-of-type e nao nth-child: a calha e o primeiro filho do <ol> e
+     inverteria a contagem, alem de partir tudo se algo fosse acrescentado. */
+  .timeline__item:nth-of-type(even) .timeline__content { grid-column: 2; text-align: left; }
+  .timeline__item:nth-of-type(even) .timeline__photo { grid-column: 1; }
 
   /* Listas inline tem de seguir o alinhamento do lado onde caem. */
   .timeline__content .chips,
   .timeline__content .timeline__links { justify-content: flex-end; }
-  .timeline__item:nth-child(even) .chips,
-  .timeline__item:nth-child(even) .timeline__links { justify-content: flex-start; }
+  .timeline__item:nth-of-type(even) .chips,
+  .timeline__item:nth-of-type(even) .timeline__links { justify-content: flex-start; }
 
   .timeline__content p { max-width: none; }
 }
