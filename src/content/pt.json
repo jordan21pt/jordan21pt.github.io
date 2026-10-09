@@ -256,7 +256,7 @@
           "year": "2017",
           "place": "Mónaco",
           "country": "Mónaco",
-          "note": "Acho que o que mais me marcou foi subir aquelas escadas todas.",
+          "note": "Não sei o que me marcou mais: as 18 horas de camioneta ou subir aquelas escadas todas.",
           "photo": "monaco.jpg",
           "photoAlt": "Mónaco"
         },
@@ -294,17 +294,17 @@
         },
         {
           "year": "2024",
-          "place": "Vigo",
-          "country": "Espanha",
-          "photo": "vigo.jpg",
-          "photoAlt": "Vigo, Espanha"
-        },
-        {
-          "year": "2024",
           "place": "Ilhas Cíes",
           "country": "Espanha",
           "photo": "cies.jpg",
           "photoAlt": "Ilhas Cíes, Espanha"
+        },
+        {
+          "year": "2024",
+          "place": "Vigo",
+          "country": "Espanha",
+          "photo": "vigo.jpg",
+          "photoAlt": "Vigo, Espanha"
         },
         {
           "year": "2025",
