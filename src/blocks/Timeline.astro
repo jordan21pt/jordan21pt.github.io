@@ -24,14 +24,17 @@ const findPhoto = (name) => (name ? images[`../assets/timeline/${name}`]?.defaul
         return (
           <li class="timeline__item" data-reveal>
             <div class="timeline__content">
-              <p class="timeline__year">{item.year}</p>
+              <p class="timeline__year">
+                {item.year}
+                {item.current && <span class="timeline__now">{block.currentLabel ?? 'No momento'}</span>}
+              </p>
               <h3>{item.title}</h3>
 
               {item.place && (
                 <p class="timeline__place">
                   {item.placeHref
                     ? <a href={item.placeHref} target="_blank" rel="noopener">{item.place}</a>
-                    : item.place}
+                    : <RichText text={item.place} />}
                 </p>
               )}
 

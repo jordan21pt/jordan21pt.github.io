@@ -48,6 +48,7 @@
           "title": { "type": "string" },
           "_nota": { "type": "string", "description": "Nota para ti; não é renderizada." },
           "_fotos": { "type": "string" },
+          "currentLabel": { "type": "string", "description": "Texto do selo das entradas com current: true (timeline)." },
 
           "eyebrow": { "type": "string" },
           "headline": { "type": "string" },
@@ -75,8 +76,9 @@
               "properties": {
                 "year": { "type": "string" },
                 "title": { "type": "string" },
-                "place": { "type": "string" },
+                "place": { "type": "string", "description": "Sem placeHref, aceita [texto](url), para varios links." },
                 "placeHref": { "type": "string" },
+                "current": { "type": "boolean", "description": "Marca a entrada com o selo de 'no momento'." },
                 "body": { "type": "string", "description": "Aceita [texto](url) no meio da frase." },
                 "tags": { "type": "array", "items": { "type": "string" } },
                 "photo": { "type": "string" },

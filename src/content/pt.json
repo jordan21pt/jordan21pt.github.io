@@ -90,15 +90,16 @@
       "type": "timeline",
       "id": "percurso",
       "title": "O meu percurso",
+      "currentLabel": "No momento",
       "items": [
         {
           "year": "2018",
           "title": "Repositor de supermercado",
           "place": "SUPERCOR - Braga",
-          "body": "Todos começamos por algum lado. Eu comecei a repor coca-colas e a fazer entregas ao domicilio enquanto estudava para o exame nacional de matemática.",
+          "body": "Todos começamos por algum lado. Eu comecei a repor coca-colas e a fazer entregas ao domicílio enquanto estudava para o exame nacional de matemática.",
           "tags": [
             "Atendimento ao cliente",
-            "Entregas ao domicilio"
+            "Entregas ao domicílio"
           ],
           "photo": "supercor.jpg",
           "photoAlt": "Supercor Braga"
@@ -107,7 +108,7 @@
           "year": "2019",
           "title": "Licenciatura em Ciências da Computação",
           "place": "Universidade do Minho",
-          "body": "Haskell, algorítmos, estruturas de dados, sistemas operativos e demasiada matemática.",
+          "body": "Haskell, algoritmos, estruturas de dados, sistemas operativos e demasiada matemática.",
           "tags": [
             "C",
             "C++",
@@ -124,7 +125,7 @@
           "year": "2021",
           "title": "Operador de loja",
           "place": "FNAC - Braga",
-          "body": "Logo apoós o covid. Tudo começou no verão enquanto terminava a licenciatura. Fazia um pouco de tudo, reposiçaõ, aconselhamento de serviços e produtos. Quando me apercebi, já tinham passado 3 anos.",
+          "body": "Logo após a covid. Tudo começou no verão enquanto terminava a licenciatura. Fazia um pouco de tudo, reposição, aconselhamento de serviços e produtos. Quando me apercebi, já tinham passado 3 anos.",
           "tags": [
             "Atendimento ao cliente"
           ],
@@ -133,10 +134,11 @@
         },
         {
           "year": "2024",
+          "current": true,
           "title": "Software developer",
-          "place": "SDI Lab",
+          "place": "[SDILAB](https://sdilab.pt) · [ETPOS](https://etpos.pt/pt)",
           "body":
-            "Entrei na equipa do etpos, um software de faturação escrito em C, para proceder à sua restruturação. A minha primeira tarefa foi investigar como poderiamos utilizar o MongoDB para recriar a sincronização multiposto. Desde aí passei por várias partes do desenvolvimento, lógica das transações do MongoDB, e estive responsável por portar vários módulos, Divisão de contas, transferÊncias de mesas, pagamentos parciais, cartões de consumo (discotecas e bares), fidelização (talhos) e pré pagos.",
+            "Entrei na equipa do etpos, um software de faturação escrito em C, para proceder à sua reestruturação. A minha primeira tarefa foi investigar como poderíamos utilizar o MongoDB para recriar a sincronização multiposto. Desde aí passei por várias partes do desenvolvimento, lógica das transações do MongoDB, e estive responsável por portar vários módulos: divisão de contas, transferências de mesas, pagamentos parciais, cartões de consumo (discotecas e bares), fidelização (talhos) e pré-pagos.",
           "tags": [  
             "C++",
             "Qt/QML",
@@ -145,23 +147,25 @@
             "SQLite",
             "Python"
           ],
-          "placeHref": "https://etpos.pt/pt",
           "photo": "sdilab.jpg",
           "photoAlt": "Apareci no jornal OMINHO"
         },
         {
           "year": "2025",
+          "current": true,
           "title": "Mestrado em Engenharia Informática",
-          "place": "IPCA",
-          "body": "Decidi continuar a estudar e expandir os meus conhecimentos, desde rest apis a cloud providers a correr microsserviços, e a passar por big data para levantar o nosso microsserviço de analitics.",
+          "place": "UPCA",
+          "body": "Decidi continuar a estudar e expandir os meus conhecimentos, desde APIs REST a cloud providers a correr microsserviços, e a passar por big data para levantar o nosso microsserviço de analytics. Na dissertação estou a trabalhar em deteção de caras em vídeo, com o objetivo de não perder ninguém quando a pessoa se vira ou as cores da imagem mudam.",
           "tags": [
             "Cloud",
             "Sistemas distribuídos",
-            "Big data"
+            "Big data",
+            "IA",
+            "Machine Learning"
           ],
           "placeHref": "https://ipca.pt",
           "photo": "ipca.jpg",
-          "photoAlt": "Campus do IPCA"
+          "photoAlt": "Campus da UPCA"
         }
       ],
       "_fotos": "Poe os ficheiros em src/assets/timeline/ e usa so o nome em `photo`. Sem ficheiro, aparece o ano em marca de agua."
@@ -230,7 +234,6 @@
       "type": "travel",
       "id": "viagens",
       "title": "Por onde andei",
-      "_nota": "DADOS DE EXEMPLO - paragens e anos inventados, so para veres o layout. Substitui pelos teus.",
       "body": "As paragens que fui fazendo, por ordem.",
       "stops": [
         {
@@ -245,7 +248,7 @@
           "year": "2016",
           "place": "Madrid",
           "country": "Espanha",
-          "note": "Visita de estudo a Madrid por parte das aulas de inglês... Sim, aqueles acontecimentos únicos que apenas acontecem uma vez na vida.",
+          "note": "Visita de estudo da disciplina de inglês. A Madrid. Ninguém questionou.",
           "photo": "madrid_turma.jpg",
           "photoAlt": "Madrid, Espanha"
         },
@@ -255,13 +258,13 @@
           "country": "Mónaco",
           "note": "Acho que o que mais me marcou foi subir aquelas escadas todas.",
           "photo": "monaco.jpg",
-          "photoAlt": "Monaco"
+          "photoAlt": "Mónaco"
         },
         {
           "year": "2019",
           "place": "Porto",
           "country": "Portugal",
-          "note": "Já passei por aqui várias vezes. Cidade incrível.",
+          "note": "Já passei por aqui várias vezes e ainda não provei a francesinha. Heresia? Talvez.",
           "photo": "porto.jpg",
           "photoAlt": "Porto, Portugal"
         },
@@ -269,15 +272,15 @@
           "year": "2020",
           "place": "Londres",
           "country": "UK",
-          "note": "Um grupo de amigos decide fazer uma viagem, recordações incríveis.",
-          "photo": "lisboa.jpg",
+          "note": "Viagem com amigos. Numa casa de jogos, tirei um peluche da máquina das garras. Sim, daquelas que nunca dão nada.",
+          "photo": "londres.jpg",
           "photoAlt": "Londres, UK"
         },
         {
           "year": "2022",
           "place": "Amesterdão",
           "country": "Holanda",
-          "note": "Daqui seguimos para Eindhoven de camioneta.",
+          "note": "Posso ou não ter provado uns bolos especiais. Daqui seguimos para Eindhoven.",
           "photo": "ams.jpg",
           "photoAlt": "Amesterdão, Holanda"
         },
@@ -285,7 +288,7 @@
           "year": "2022",
           "place": "Eindhoven",
           "country": "Holanda",
-          "note": "História engraçada, fomos avisados na 5º feira que o nosso voo de 6º tinha sido cancelado e eu tinha trabalho no sábado. Acabamos por apanhar uma camioneta até frança para conseguir chegar a tempo.",
+          "note": "Na quinta avisaram-nos que o voo de sexta tinha sido cancelado, e eu trabalhava no sábado. Apanhámos uma camioneta até França para tentar chegar a tempo. Spoiler: não cheguei.",
           "photo": "ein.jpg",
           "photoAlt": "Eindhoven, Holanda"
         },
@@ -293,8 +296,9 @@
           "year": "2024",
           "place": "Valência",
           "country": "Espanha",
+          "note": "Acho que me apaixonei por esta cidade.",
           "photo": "val.jpg",
-          "photoAlt": "Valencia, Espanha"
+          "photoAlt": "Valência, Espanha"
         },
         {
           "year": "2025",
@@ -306,9 +310,9 @@
         },
         {
           "year": "2025",
-          "place": "Palermo, Favignana e Cefalu.",
+          "place": "Sicília",
           "country": "Itália",
-          "note": "Acho que nunca vou superar a comida de Cefalu...",
+          "note": "Palermo, Favignana e Cefalù. Acho que nunca vou superar a comida de Cefalù...",
           "photoAlt": "Sicília, Itália"
         }
       ]

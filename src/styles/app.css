@@ -185,6 +185,9 @@ img { max-width: 100%; height: auto; display: block; }
   padding-inline: var(--bleed-pad);
 }
 
+/* O reset do h1 tira a margem; sem isto o nome encosta ao texto. */
+.hero__copy h1 { margin-bottom: clamp(1rem, 0.5rem + 1.5vw, 1.75rem); }
+
 .hero__media {
   position: relative;
   /* Empilhado, a caixa segue o retrato (fonte 3:4) em vez de o deitar.
@@ -356,6 +359,28 @@ img { max-width: 100%; height: auto; display: block; }
   letter-spacing: 0.08em;
   color: var(--accent-text);
   margin: 0 0 0.35rem;
+}
+/* Mesmo ponto pulsante do .badge do hero, em versao de linha. */
+.timeline__now {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-inline-start: 0.6rem;
+  padding: 0.1rem 0.55rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  vertical-align: 0.1em;
+}
+.timeline__now::before {
+  content: "";
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 2.4s ease-out infinite;
 }
 .timeline__place { color: var(--muted); font-size: 0.9rem; margin: 0.2rem 0 0.6rem; }
 .timeline__item .chips { margin-top: 0.75rem; }
