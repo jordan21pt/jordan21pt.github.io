@@ -242,47 +242,74 @@
           "photoAlt": "Braga, Portugal"
         },
         {
+          "year": "2016",
+          "place": "Madrid",
+          "country": "Espanha",
+          "note": "Visita de estudo a Madrid por parte das aulas de inglês... Sim, aqueles acontecimentos únicos que apenas acontecem uma vez na vida.",
+          "photo": "madrid_turma.jpg",
+          "photoAlt": "Madrid, Espanha"
+        },
+        {
+          "year": "2016",
+          "place": "Mónaco",
+          "country": "Mónaco",
+          "note": "Acho que o que mais me marcou foi subir aquelas escadas todas.",
+          "photo": "monaco.jpg",
+          "photoAlt": "Monaco"
+        },
+        {
           "year": "2019",
           "place": "Porto",
           "country": "Portugal",
-          "note": "Been here multiple times, great city.",
+          "note": "Já passei por aqui várias vezes. Cidade incrível.",
           "photo": "porto.jpg",
           "photoAlt": "Porto, Portugal"
         },
         {
           "year": "2020",
-          "place": "London",
+          "place": "Londres",
           "country": "UK",
+          "note": "Um grupo de amigos decide fazer uma viagem, recordações incríveis.",
           "photo": "lisboa.jpg",
-          "photoAlt": "Lisboa, Portugal"
+          "photoAlt": "Londres, UK"
         },
         {
           "year": "2022",
-          "place": "Madrid",
-          "country": "Espanha",
-          "photo": "madrid.jpg",
-          "photoAlt": "Madrid, Espanha"
+          "place": "Amesterdão",
+          "country": "Holanda",
+          "note": "Daqui seguimos para Eindhoven de camioneta.",
+          "photo": "ams.jpg",
+          "photoAlt": "Amesterdão, Holanda"
         },
         {
-          "year": "2023",
-          "place": "Barcelona",
-          "country": "Espanha",
-          "photo": "barcelona.jpg",
-          "photoAlt": "Barcelona, Espanha"
+          "year": "2022",
+          "place": "Eindhoven",
+          "country": "Holanda",
+          "note": "História engraçada, fomos avisados na 5º feira que o nosso voo de 6º tinha sido cancelado e eu tinha trabalho no sábado. Acabamos por apanhar uma camioneta até frança para conseguir chegar a tempo.",
+          "photo": "ein.jpg",
+          "photoAlt": "Eindhoven, Holanda"
         },
         {
           "year": "2024",
+          "place": "Valência",
+          "country": "Espanha",
+          "photo": "val.jpg",
+          "photoAlt": "Valencia, Espanha"
+        },
+        {
+          "year": "2025",
           "place": "Paris",
           "country": "França",
+          "note": "A torre Eiffel é definitivamente alta.",
           "photo": "paris.jpg",
           "photoAlt": "Paris, França"
         },
         {
           "year": "2025",
-          "place": "Roma",
+          "place": "Palermo, Favignana e Cefalu.",
           "country": "Itália",
-          "photo": "roma.jpg",
-          "photoAlt": "Roma, Itália"
+          "note": "Acho que nunca vou superar a comida de Cefalu...",
+          "photoAlt": "Sicília, Itália"
         }
       ]
     },
