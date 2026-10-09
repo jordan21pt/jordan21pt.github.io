@@ -33,7 +33,7 @@
       "title": "Sobre mim",
       "paragraphs": [
         "Licenciado em Ciências da Computação pela Universidade do Minho. No dia a dia trabalho com C++, Qt/QML e MongoDB, na modernização de um sistema POS legacy escrito em C e SQLite.",
-        "Em paralelo, faço o mestrado em Engenharia Informática no IPCA. A dissertação é sobre deteção de caras em vídeo, com prioridade ao recall: reduzir os falsos negativos quando a pessoa se vira ou as cores da imagem mudam."
+        "Em paralelo, faço o mestrado em Engenharia Informática na UPCA. A dissertação é sobre deteção de caras em vídeo, com prioridade ao recall: reduzir os falsos negativos quando a pessoa se vira ou as cores da imagem mudam."
       ]
     },
     {
@@ -48,7 +48,8 @@
             "TypeScript",
             "JavaScript",
             "C",
-            "SQL"
+            "SQL",
+            "Python"
           ]
         },
         {
@@ -60,7 +61,9 @@
             "PostgreSQL",
             "Neo4j",
             "SQLite",
-            "REST"
+            "REST",
+            "PySpark",
+            "Databricks"
           ]
         },
         {
@@ -86,7 +89,7 @@
     {
       "type": "timeline",
       "id": "percurso",
-      "title": "Percurso",
+      "title": "O meu percurso",
       "items": [
         {
           "year": "2018",
@@ -94,64 +97,67 @@
           "place": "SUPERCOR - Braga",
           "body": "Todos começamos por algum lado. Eu comecei a repor coca-colas e a fazer entregas ao domicilio enquanto estudava para o exame nacional de matemática.",
           "tags": [
-            "Atendimento ao cliente"
+            "Atendimento ao cliente",
+            "Entregas ao domicilio"
           ],
-          "placeHref": "https://www.uminho.pt",
-          "photo": "uminho.jpg",
-          "photoAlt": "Campus da Universidade do Minho"
+          "photo": "supercor.jpg",
+          "photoAlt": "Supercor Braga"
         },
         {
-          "year": "2019 — 2024",
+          "year": "2019",
           "title": "Licenciatura em Ciências da Computação",
           "place": "Universidade do Minho",
-          "body": "Bases de algoritmia, estruturas de dados, sistemas operativos e engenharia de software.",
+          "body": "Haskell, algorítmos, estruturas de dados, sistemas operativos e demasiada matemática.",
           "tags": [
             "C",
-            "Algoritmia",
-            "Sistemas"
+            "C++",
+            "Java",
+            "Python",
+            "Sistemas operativos",
+            "Programação paralela"
           ],
           "placeHref": "https://www.uminho.pt",
-          "photo": "uminho.jpg",
+          "photo": "amigos.jpg",
           "photoAlt": "Campus da Universidade do Minho"
         },
         {
-          "year": "2021 - 2023",
+          "year": "2021",
           "title": "Operador de loja",
           "place": "FNAC - Braga",
-          "body": "Fazia um pouco de tudo, reposiçaõ de produtos, aconselhamento de serviços e produtos, vendas.",
+          "body": "Logo apoós o covid. Tudo começou no verão enquanto terminava a licenciatura. Fazia um pouco de tudo, reposiçaõ, aconselhamento de serviços e produtos. Quando me apercebi, já tinham passado 3 anos.",
           "tags": [
             "Atendimento ao cliente"
           ],
-          "photo": "primeiro-emprego.jpg",
-          "photoAlt": "Secretária de trabalho"
+          "photo": "fnac.jpg",
+          "photoAlt": "Eu na FNAC"
         },
         {
           "year": "2024",
-          "title": "Modernização do POS",
+          "title": "Software developer",
           "place": "SDI Lab",
-          "body": "Migração progressiva do sistema legacy para C++, Qt/QML e MongoDB. Reestruturei componentes críticos e reduzi o custo de manutenção sem parar a evolução do produto.",
-          "tags": [
+          "body":
+            "Entrei na equipa do etpos, um software de faturação escrito em C, para proceder à sua restruturação. A minha primeira tarefa foi investigar como poderiamos utilizar o MongoDB para recriar a sincronização multiposto. Desde aí passei por várias partes do desenvolvimento, lógica das transações do MongoDB, e estive responsável por portar vários módulos, Divisão de contas, transferÊncias de mesas, pagamentos parciais, cartões de consumo (discotecas e bares), fidelização (talhos) e pré pagos.",
+          "tags": [  
             "C++",
             "Qt/QML",
-            "MongoDB"
+            "MongoDB",
+            "C",
+            "SQLite",
+            "Python"
           ],
-          "links": [
-            {
-              "label": "Repositório",
-              "href": "https://github.com/jordan21pt"
-            }
-          ],
-          "photo": "pos.jpg",
-          "photoAlt": "Interface do sistema POS"
+          "placeHref": "https://etpos.pt/pt",
+          "photo": "sdilab.jpg",
+          "photoAlt": "Apareci no jornal OMINHO"
         },
         {
-          "year": "2025 — presente",
+          "year": "2025",
           "title": "Mestrado em Engenharia Informática",
           "place": "IPCA",
-          "body": "Foco em arquiteturas backend, cloud e sistemas distribuídos, a par do trabalho em produto. Ver também os [projetos](#projetos) que saíram daqui.",
+          "body": "Decidi continuar a estudar e expandir os meus conhecimentos, desde rest apis a cloud providers a correr microsserviços, e a passar por big data para levantar o nosso microsserviço de analitics.",
           "tags": [
             "Cloud",
-            "Sistemas distribuídos"
+            "Sistemas distribuídos",
+            "Big data"
           ],
           "placeHref": "https://ipca.pt",
           "photo": "ipca.jpg",
@@ -212,7 +218,7 @@
         },
         {
           "q": "Com que stack trabalhas?",
-          "a": "C++ e Qt/QML no desktop, Node.js e TypeScript no servidor, MongoDB e MySQL em dados, Docker e Kubernetes em infraestrutura."
+          "a": "C++ e Qt/QML, Node.js e TypeScript, MongoDB e MySQL em dados, Docker e Kubernetes em infraestrutura."
         },
         {
           "q": "Estás disponível já?",
