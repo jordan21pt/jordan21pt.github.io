@@ -245,7 +245,7 @@
           "photoAlt": "Braga, Portugal"
         },
         {
-          "year": "2016",
+          "year": "2017",
           "place": "Madrid",
           "country": "Espanha",
           "note": "Visita de estudo da disciplina de inglês. A Madrid. Ninguém questionou.",
@@ -253,7 +253,7 @@
           "photoAlt": "Madrid, Espanha"
         },
         {
-          "year": "2016",
+          "year": "2017",
           "place": "Mónaco",
           "country": "Mónaco",
           "note": "Acho que o que mais me marcou foi subir aquelas escadas todas.",
@@ -313,6 +313,7 @@
           "place": "Sicília",
           "country": "Itália",
           "note": "Palermo, Favignana e Cefalù. Acho que nunca vou superar a comida de Cefalù...",
+          "photo": "sicilia.jpg",
           "photoAlt": "Sicília, Itália"
         }
       ]
